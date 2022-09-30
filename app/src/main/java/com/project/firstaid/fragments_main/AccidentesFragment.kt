@@ -10,10 +10,13 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.AccidentesAdapter
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
+import com.project.firstaid.MainActivity
 import com.project.firstaid.R
 
 
 class AccidentesFragment : Fragment() {
+
+
 
     private val titulosAccidentes = ArrayList<String>()
     private val iconosAccidentes = ArrayList<Int>()
@@ -33,7 +36,7 @@ class AccidentesFragment : Fragment() {
 
 
         val recyclerView = view.findViewById<RecyclerView>(R.id.recTitles)
-        Adapter = AccidentesAdapter(titulosAccidentes, iconosAccidentes)
+        Adapter = AccidentesAdapter(titulosAccidentes, iconosAccidentes, requireContext())
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
         recyclerView.adapter = Adapter
 
@@ -64,6 +67,10 @@ class AccidentesFragment : Fragment() {
         }
     }
 
+    override fun onResume() {
+        super.onResume()
+        (requireActivity() as MainActivity).supportActionBar?.title = "Accidentes"
+    }
 
 
 }

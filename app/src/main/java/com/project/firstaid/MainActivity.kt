@@ -86,6 +86,7 @@ class MainActivity : AppCompatActivity() {
 
         //change color of action bar to white
         supportActionBar?.setBackgroundDrawable(getDrawable(R.color.enfasis))
+
         setUpTabs()
     }
 
@@ -106,7 +107,40 @@ class MainActivity : AppCompatActivity() {
         /*jump line*/
         tabs.getTabAt(0)?.setIcon(R.drawable.house_solid)
         tabs.getTabAt(1)?.setIcon(R.drawable.triangle_exclamation)
+        //change de color of the icons to white
         tabs.getTabAt(2)?.setIcon(R.drawable.phone_solid)
 
+        tabs.getTabAt(1)?.icon?.setTint(getColor(R.color.blancodeshabilitadoApp))
+        tabs.getTabAt(2)?.icon?.setTint(getColor(R.color.blancodeshabilitadoApp))
     }
+
+    //change the color of the icons when the tab is selected
+    override fun onResume() {
+        super.onResume()
+
+        //change name of the action bar
+
+        val tabs = findViewById<com.google.android.material.tabs.TabLayout>(R.id.tabs)
+        tabs.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
+            override fun onTabSelected(tab: TabLayout.Tab) {
+                tab.icon?.setTint(getColor(R.color.blancoApp))
+            }
+
+            override fun onTabUnselected(tab: TabLayout.Tab) {
+                tab.icon?.setTint(getColor(R.color.blancodeshabilitadoApp))
+            }
+
+            override fun onTabReselected(tab: TabLayout.Tab) {
+                tab.icon?.setTint(getColor(R.color.blancoApp))
+            }
+
+
+
+
+        })
+
+
+    }
+
+
 }

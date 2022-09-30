@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.project.firstaid.MainActivity
 import com.project.firstaid.Model
 import com.project.firstaid.R
 import com.project.firstaid.numberAdapter
@@ -52,8 +53,14 @@ class EmergenciasFragment : Fragment() {
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
         recyclerView.adapter = numberAdapter
 
+        //change tittlebar in this fragment to "Emergencias"
 
         return view
+    }
+
+    override fun onResume() {
+        super.onResume()
+        (requireActivity() as MainActivity).supportActionBar?.title = "Emergencias"
     }
 
 

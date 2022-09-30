@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.project.firstaid.MainActivity
 import com.project.firstaid.R
 import org.imaginativeworld.whynotimagecarousel.ImageCarousel
 import org.imaginativeworld.whynotimagecarousel.model.CarouselItem
@@ -70,6 +71,10 @@ class Home2Fragment : Fragment() {
         return view
     }
 
+    override fun onResume() {
+        super.onResume()
+        (requireActivity() as MainActivity).supportActionBar?.title = "First Aid App"
+    }
 
 
 }

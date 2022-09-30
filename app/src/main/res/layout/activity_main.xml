@@ -27,11 +27,11 @@
             app:layout_constraintTop_toTopOf="parent"
             app:tabBackground="@color/enfasis"
             app:tabGravity="fill"
-            app:tabInlineLabel="true"
             app:tabMode="fixed"
             app:tabSelectedTextColor="@android:color/white"
             app:tabTextAppearance="@style/customTabStyle"
-            app:tabTextColor="@android:color/black" />
+            app:tabTextColor="@color/blancodeshabilitadoApp"
+            app:tabInlineLabel="false" />
 
     </com.google.android.material.appbar.AppBarLayout>
 
