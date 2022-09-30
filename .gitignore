@@ -1,0 +1,29 @@
+*.iml
+.gradle
+/local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+
+#Carpetas
+.vscode
+.vscode-test
+.vscode-test-data
+
+#carpetas mac y tales
+.DS_Store
+.env
+
+#archivos de node js
+node_modules
+
+#archivos
