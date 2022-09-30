@@ -28,6 +28,47 @@ class MainActivity : AppCompatActivity() {
         supportActionBar?.hide()
 */
 
+        val user = hashMapOf(
+            "first" to "Ada",
+            "last" to "Lovelace",
+            "born" to 1815
+        )
+
+/*        firestore.collection("Accidentes").document("Accidente1").set(user)
+            .addOnSuccessListener {
+                Toast.makeText(this, "DocumentSnapshot successfully written!", Toast.LENGTH_SHORT).show()
+            }.addOnCanceledListener {
+                Toast.makeText(this, "Error writing document", Toast.LENGTH_SHORT).show()
+            }*/
+
+
+        //OWO
+
+        //read from firestore documentpath "Accidente1" and print in toast
+        firestore.collection("Accidentes").document("Accidente1").get()
+            .addOnSuccessListener { document ->
+                if (document != null) {
+                    Toast.makeText(this, "DocumentSnapshot data: ${document.data}", Toast.LENGTH_SHORT).show()
+                } else {
+                    Toast.makeText(this, "No such document", Toast.LENGTH_SHORT).show()
+                }
+            }
+            .addOnFailureListener { exception ->
+                Toast.makeText(this, "get failed with ", Toast.LENGTH_SHORT).show()
+            }
+
+        //read from firestore documentpath "Accidente" and print in toast the "Pregunta" map
+        firestore.collection("Accidentes").document("Accidente1").get()
+            .addOnSuccessListener { document ->
+                if (document != null) {
+                    Toast.makeText(this, "DocumentSnapshot data: ${document.get("Pregunta")}", Toast.LENGTH_SHORT).show()
+                } else {
+                    Toast.makeText(this, "No such document", Toast.LENGTH_SHORT).show()
+                }
+            }
+            .addOnFailureListener { exception ->
+                Toast.makeText(this, "get failed with ", Toast.LENGTH_SHORT).show()
+            }
 
 
 
