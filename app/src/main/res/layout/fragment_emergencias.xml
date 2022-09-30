@@ -25,8 +25,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:contentDescription="un gato en un tren"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/wallpapercelularblur" />
+                    android:src="@drawable/wallpapercelularblur"
+                    android:scaleType="centerCrop" />
 
                 <TextView
                     android:layout_width="match_parent"

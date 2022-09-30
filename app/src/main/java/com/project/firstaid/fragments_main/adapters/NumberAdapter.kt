@@ -52,7 +52,7 @@ class numberAdapter (val ArryList: ArrayList<Model>, val context:Context):
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): viewHolder {
-        val v = LayoutInflater.from(parent.context).inflate(R.layout.numbersrows , parent, false)
+        val v = LayoutInflater.from(parent.context).inflate(R.layout.row_numbers , parent, false)
         return viewHolder(v)
     }
 

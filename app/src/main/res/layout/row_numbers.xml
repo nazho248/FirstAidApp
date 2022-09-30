@@ -54,7 +54,7 @@
             android:layout_height="wrap_content"
             android:textColor="@color/black"
             android:backgroundTint="@color/grisclaroApp"
-
+            android:foreground="?android:attr/selectableItemBackground"
             android:elevation="2dp"
             android:text="Agregar A los Contactos" />
 

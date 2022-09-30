@@ -41,11 +41,23 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this, "Error writing document", Toast.LENGTH_SHORT).show()
             }*/
 
+        //print all the data from firestore documentpath "Accidentes" into a toast
+/*
+        firestore.collection("Accidentes").get()
+            .addOnSuccessListener { result ->
+                for (document in result) {
+                    Toast.makeText(this, "${document.id} => ${document.data}", Toast.LENGTH_SHORT).show()
+                }
+            }
+            .addOnFailureListener { exception ->
+                Toast.makeText(this, "Error getting documents: ", Toast.LENGTH_SHORT).show()
+            }
+*/
 
         //OWO
 
         //read from firestore documentpath "Accidente1" and print in toast
-        firestore.collection("Accidentes").document("Accidente1").get()
+/*        firestore.collection("Accidentes").document("Accidente1").get()
             .addOnSuccessListener { document ->
                 if (document != null) {
                     Toast.makeText(this, "DocumentSnapshot data: ${document.data}", Toast.LENGTH_SHORT).show()
@@ -55,10 +67,10 @@ class MainActivity : AppCompatActivity() {
             }
             .addOnFailureListener { exception ->
                 Toast.makeText(this, "get failed with ", Toast.LENGTH_SHORT).show()
-            }
+            }*/
 
         //read from firestore documentpath "Accidente" and print in toast the "Pregunta" map
-        firestore.collection("Accidentes").document("Accidente1").get()
+/*        firestore.collection("Accidentes").document("Accidente1").get()
             .addOnSuccessListener { document ->
                 if (document != null) {
                     Toast.makeText(this, "DocumentSnapshot data: ${document.get("Pregunta")}", Toast.LENGTH_SHORT).show()
@@ -68,7 +80,7 @@ class MainActivity : AppCompatActivity() {
             }
             .addOnFailureListener { exception ->
                 Toast.makeText(this, "get failed with ", Toast.LENGTH_SHORT).show()
-            }
+            }*/
 
 
 

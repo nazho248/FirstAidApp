@@ -58,7 +58,9 @@ dependencies {
     //recyclerview
     implementation 'androidx.recyclerview:recyclerview:1.2.1'
 
-    //blurry
-    implementation 'jp.wasabeef:blurry:4.0.1'
+
     implementation platform('com.google.firebase:firebase-bom:30.4.1')
+
+    //picasso
+    implementation 'com.squareup.picasso:picasso:2.71828'
 }
