@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "450842623664",
+    "project_id": "firstaidapp-ed028",
+    "storage_bucket": "firstaidapp-ed028.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:450842623664:android:6be7ff872532f19f058575",
+        "android_client_info": {
+          "package_name": "com.project.firstaid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "450842623664-131l4llb9am4k9qc91g0v89c57pce0k2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCiEtXB3a6XtTudi4GhGtXDTW_c6zeolG0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "450842623664-131l4llb9am4k9qc91g0v89c57pce0k2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

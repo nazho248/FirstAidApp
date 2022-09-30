@@ -1,21 +1,24 @@
 package com.project.firstaid
 
 import android.os.Bundle
-import android.view.View
+import android.widget.Toast
 import android.widget.Toolbar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager.widget.ViewPager
 import com.google.android.material.tabs.TabLayout
-import com.project.firstaid.fragments.AccidentesFragment
-import com.project.firstaid.fragments.EmergenciasFragment
-import com.project.firstaid.fragments.Home2Fragment
-import com.project.firstaid.fragments.adapters.ViewPageAdapter
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
+import com.project.firstaid.fragments_main.AccidentesFragment
+import com.project.firstaid.fragments_main.EmergenciasFragment
+import com.project.firstaid.fragments_main.Home2Fragment
+import com.project.firstaid.fragments_main.adapters.ViewPageAdapter
 
 class MainActivity : AppCompatActivity() {
 
     val Toolbar: Toolbar? = null
     val ViewPager : ViewPager?= null
     val TabLayout : TabLayout?= null
+    val firestore = Firebase.firestore
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,14 +31,11 @@ class MainActivity : AppCompatActivity() {
 
 
 
-
-
-
-
         //change color of action bar to white
         supportActionBar?.setBackgroundDrawable(getDrawable(R.color.enfasis))
         setUpTabs()
     }
+
 
 
 

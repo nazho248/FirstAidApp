@@ -1,4 +1,4 @@
-package com.project.firstaid.fragments
+package com.project.firstaid.fragments_main
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

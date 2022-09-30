@@ -1,4 +1,4 @@
-package com.project.firstaid.fragments
+package com.project.firstaid.fragments_main
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -10,8 +10,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.project.firstaid.Model
 import com.project.firstaid.R
 import com.project.firstaid.numberAdapter
-import org.imaginativeworld.whynotimagecarousel.ImageCarousel
-import org.imaginativeworld.whynotimagecarousel.model.CarouselItem
 
 
 class EmergenciasFragment : Fragment() {

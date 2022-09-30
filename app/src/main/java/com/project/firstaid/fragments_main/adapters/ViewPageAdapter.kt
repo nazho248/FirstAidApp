@@ -1,4 +1,4 @@
-package com.project.firstaid.fragments.adapters
+package com.project.firstaid.fragments_main.adapters
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
