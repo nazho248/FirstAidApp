@@ -1,0 +1,33 @@
+{
+  "Accidentes": [
+    {
+      "id": 1,
+      "Titulo": "Raspones",
+      "Descripcion": "Las raspaduras (raspones) son heridas cutáneas que rozan o arrancan la piel. La mayoría de los raspones son superficiales y no penetran mucho, pero puede que algunos eliminen varias capas de piel. ",
+      "img" :  1,
+      "Pasos": [
+        "Ante todo, tranquilizaremos a la persona explicándole lo que le vamos a hacer.",
+        "Permita a la persona que tome una posición cómoda, pregúntele la causa de la lesión.",
+        "Lavarse las manos a fondo y utilizar instrumental limpio para minimizar el riesgo de infecciones y desinfecte los instrumentos que va a utilizar (tijeras, pinzas, etc.) o el material e instrumental que incluya su botiquín.",
+        "En caso de disponer de guantes, utilizarlos para auto protegerse de infecciones como el SIDA y la HEPATITIS en contacto con sangre infectada. ",
+        "Limpiar la herida con agua y jabón o, en su caso, con agua oxigenada para eliminar los cuerpos extraños de la herida. ",
+        "Secar la herida con gasas estériles de un solo uso y nunca utilizar algodón. La herida la limpiaremos siempre de dentro a fuera para evitar la introducción de gérmenes. ",
+        "Aplicar un antiséptico como la Povidona Yodada. ",
+        "Tapar la herida con gasas estériles de un solo uso y sujetarlas con un vendaje o esparadrapo.",
+        "Quítese los guantes de manera que no haga contacto con la zona expuesta a la herida y lávese siempre las manos después de dar primeros auxilios."
+      ]
+    },
+    {
+      "id": 2,
+        "Titulo": "Heridas Contusas",
+      "Descripcion":"En su mayoría, las heridas contusas (por golpe) son producidas por el impacto de un objeto romo sin punta, como un palo, una piedra o un puño. La intensidad del impacto provoca que los bordes de la herida queden aplastados, por la resistencia que ofrece el hueso al golpe, y ocasionan la lesión en los tejidos blandos. Normalmente, estas heridas producen dolor y hematomas (moretones) ",
+        "img" :  2,
+        "Pasos": [
+          "1",
+            "2",
+            "3",
+            "4"
+          ]
+    }
+  ]
+}

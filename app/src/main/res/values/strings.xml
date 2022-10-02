@@ -7,6 +7,8 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="descripcionApp">En esta app encontrarás guías a diferentes accidentes y el paso a paso a realizar. Además de conocimientos básicos de primeros auxilios en la sección a continuación.</string>
+    <string name="lorem_Descriptivo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquam, lorem vitae blandit pellentesque, orci nisi condimentum nibh, ornare mollis lectus lacus id diam.</string>
     <string name="Pautas_Basicas">En esta sección encontrarás conceptos básicos de primeros auxilios</string>
     <string name="title_activity_information">Information</string>
+    <string name="title_activity_aaaaaaaaaa">AAAAAAAAAA</string>
 </resources>

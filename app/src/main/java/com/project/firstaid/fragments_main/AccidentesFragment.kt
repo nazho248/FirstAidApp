@@ -58,7 +58,7 @@ class AccidentesFragment : Fragment() {
                     if (document.get("img") != null) {
                         iconosAccidentes.add(document.get("img").toString().toInt())
                     }else{
-                        iconosAccidentes.add(5)
+                        iconosAccidentes.add(100)
                     }
                 }
                 //notify the adapter that the data has changed

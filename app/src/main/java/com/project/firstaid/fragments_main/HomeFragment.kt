@@ -5,18 +5,20 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.project.firstaid.GlobalClass
 import com.project.firstaid.MainActivity
 import com.project.firstaid.R
 import org.imaginativeworld.whynotimagecarousel.ImageCarousel
 import org.imaginativeworld.whynotimagecarousel.model.CarouselItem
 
 
-class Home2Fragment : Fragment() {
+class HomeFragment : Fragment() {
 
     val list = mutableListOf<CarouselItem>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
 /*        val carousel: ImageCarousel = findViewById(R.id.carousel)
         list.add(CarouselItem("drawable://"+R.drawable.logo_ini))
         list.add(CarouselItem("drawable://"+R.drawable.logo_ini))
@@ -24,14 +26,6 @@ class Home2Fragment : Fragment() {
 
     }
 
-
-
-/*    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
-
-                // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false)
-    }*/
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
@@ -63,10 +57,9 @@ class Home2Fragment : Fragment() {
         carousel.autoPlay = true
         carousel.autoPlayDelay = 5000 // Milliseconds
 
+
+
         carousel.setData(list)
-
-
-        /*      carousel.addData(list)*/
 
         return view
     }

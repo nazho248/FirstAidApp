@@ -10,7 +10,6 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.annotation.NonNull
-import androidx.appcompat.view.menu.MenuView.ItemView
 import androidx.recyclerview.widget.RecyclerView
 import com.project.firstaid.Information
 import com.project.firstaid.R
@@ -24,8 +23,6 @@ internal class AccidentesAdapter(var titulos: List<String>, var iconos: ArrayLis
 
     internal inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-        lateinit var countryList: Array<String>
-        lateinit var flags: IntArray
         var itemTextView: TextView = itemView.findViewById(R.id.tvtxtTitle)
         var ImageView: ImageView = itemView.findViewById(R.id.tvImgIcon)
         //assign itemView to the global variable itemViewGlobal
@@ -54,7 +51,7 @@ internal class AccidentesAdapter(var titulos: List<String>, var iconos: ArrayLis
 */
         //put item2int to imageview, default file loading
 
-        var image = R.drawable.icon5
+        var image = R.drawable.icon100
 
         if (item2 >= 0 || item2 <= 9) {
             val res: Resources = holder.ImageView.resources
@@ -64,14 +61,14 @@ internal class AccidentesAdapter(var titulos: List<String>, var iconos: ArrayLis
         //coloca el icono
         holder.ImageView.setImageResource(image)
 
-
         val tarjeta = itemViewGlobal.findViewById<View>(R.id.RowAccidente)
         //intent para pasar de actividad al presionar una tarjeta
         tarjeta.setOnClickListener {
             val intent = Intent(context, Information::class.java)
-            intent.putExtra("title", item)
+
+            intent.putExtra("accidente", item)
             //make a toast with the title of the card
-            Toast.makeText(context, item, Toast.LENGTH_SHORT).show()
+            intent.putExtra("posicion", position)
             context.startActivity(intent)
         }
 
