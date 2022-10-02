@@ -2,8 +2,11 @@ package com.project.firstaid
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.LinearLayout
 import android.widget.TextView
+import android.widget.Toast
 import android.widget.Toolbar
 import androidx.viewpager.widget.ViewPager
 import com.google.android.material.tabs.TabLayout
@@ -47,6 +50,28 @@ class Information : AppCompatActivity() {
         }
         setUpTabs()
     }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        //the menu is in the toolbar
+        menuInflater.inflate(R.menu.menu_main, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.action_exit -> {
+                finish()
+            }
+            R.id.action_references -> {
+/*                val intent = Intent(this, ReferencesActivity::class.java)
+                startActivity(intent)*/
+                Toast.makeText(this, "Aun no las pongo :)", Toast.LENGTH_SHORT).show()
+            }
+            else -> return super.onOptionsItemSelected(item)
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
 
     private fun setUpTabs(){
         val bundle = Bundle()

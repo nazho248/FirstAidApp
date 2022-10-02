@@ -2,6 +2,8 @@ package com.project.firstaid
 
 import android.os.Bundle
 import android.util.Log
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.Toast
 import android.widget.Toolbar
 import androidx.appcompat.app.AppCompatActivity
@@ -31,7 +33,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
 
-        supportActionBar?.hide()
+       // supportActionBar?.hide()
 
         //ejemplo de importar de json
         val jsonData = applicationContext.resources.openRawResource(
@@ -168,6 +170,26 @@ class MainActivity : AppCompatActivity() {
         //change color of action bar to white
         supportActionBar?.setBackgroundDrawable(getDrawable(R.color.enfasis))
         setUpTabs()
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_main, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.action_exit -> {
+                finish()
+            }
+            R.id.action_references -> {
+/*                val intent = Intent(this, ReferencesActivity::class.java)
+                startActivity(intent)*/
+                Toast.makeText(this, "Aun no las pongo :)", Toast.LENGTH_SHORT).show()
+            }
+            else -> return super.onOptionsItemSelected(item)
+        }
+        return super.onOptionsItemSelected(item)
     }
 
     private fun setUpTabs() {

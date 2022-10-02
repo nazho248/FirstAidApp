@@ -42,6 +42,7 @@ class AccidentesFragment : Fragment() {
 
 
         prepareItems()
+        //wait until the data is loaded
 
         return view
     }

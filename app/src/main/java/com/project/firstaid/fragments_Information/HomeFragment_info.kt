@@ -1,5 +1,6 @@
 package com.project.firstaid.fragments_Information
 
+import android.content.res.Resources
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -63,11 +64,21 @@ class HomeFragment_info(bundle: Int) : Fragment() {
 
         //modificando interfaz
         val image = view.findViewById<ImageView>(R.id.fragment_presentation_image)
+        var drawableimg = R.drawable.wallpaperpb
         //image.setImageResource(R.drawable.citywall)
         var descriptionAccident = view.findViewById<TextView>(R.id.fragment_presentation_title)
-
+        //get the variable descirption accident posGlobal
+        firestore.document((posGlobal+1).toString()).get().addOnSuccessListener {
+            var description = it.get("Descripcion")
+            if (description != null) {
+                drawableimg = resources.getIdentifier("imagen"+(posGlobal+1), "drawable", "com.project.firstaid")
+            }
+            image.setImageResource(drawableimg)
+            descriptionAccident.text = description.toString()
+        }
         //descriptionAccident.text = test
 
+        Thread.sleep(500)
 
         return view
     }

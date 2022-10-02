@@ -53,7 +53,7 @@ internal class AccidentesAdapter(var titulos: List<String>, var iconos: ArrayLis
 
         var image = R.drawable.icon100
 
-        if (item2 >= 0 || item2 <= 9) {
+        if (item2 >= 0 || item2 <= 101) {
             val res: Resources = holder.ImageView.resources
             image = res.getIdentifier("icon$item2", "drawable", "com.project.firstaid")
         }
