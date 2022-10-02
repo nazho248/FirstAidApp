@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
 
-       // supportActionBar?.hide()
+        // supportActionBar?.hide()
 
         //ejemplo de importar de json
         val jsonData = applicationContext.resources.openRawResource(
@@ -45,11 +45,11 @@ class MainActivity : AppCompatActivity() {
         ).bufferedReader().use { it.readText() }
 
         var outputJsonString = JSONObject(jsonData)
-        Log.d("TAG_DATA", ""+outputJsonString.toString())
+        Log.d("TAG_DATA", "" + outputJsonString.toString())
         val users = outputJsonString.getJSONArray("users") as JSONArray
         println("------------------------------")
 
-        for( i in 0 until users.length()){
+        for (i in 0 until users.length()) {
             val id = users.getJSONObject(i).getString("id")
             val name = users.getJSONObject(i).getString("name")
             val email = users.getJSONObject(i).getString("email")
@@ -79,24 +79,32 @@ class MainActivity : AppCompatActivity() {
         val accidentes = outputJsonString.getJSONArray("Accidentes") as JSONArray
 
 
-        for( i in 0 until accidentes.length()) {
+        for (i in 0 until accidentes.length()) {
 
 
-                var id = accidentes.getJSONObject(i).getString("id").toString()
-                //save the "accidente" object in a variable, this contains a "Titulo", "Descripcion, "img" and "Pasos" that are an array of Strings
+            var id = accidentes.getJSONObject(i).getString("id").toString()
+            //save the "accidente" object in a variable, this contains a "Titulo", "Descripcion, "img" and "Pasos" that are an array of Strings
             var listaPasos = arrayListOf<String>()
             //print the first "Paso" of accidente one by one
             for (j in 0 until accidentes.getJSONObject(i).getJSONArray("Pasos").length()) {
                 listaPasos.add(accidentes.getJSONObject(i).getJSONArray("Pasos").getString(j))
             }
+            var preguntas = arrayListOf<String>()
+            var respuestas = arrayListOf<String>()
+            for (j in 0 until accidentes.getJSONObject(i).getJSONArray("Preguntas").length()) {
+                preguntas.add(accidentes.getJSONObject(i).getJSONArray("Preguntas").getString(j))
+                respuestas.add(accidentes.getJSONObject(i).getJSONArray("Respuestas").getString(j))
+            }
 
             var accidente = hashMapOf(
-                    "Titulo" to accidentes.getJSONObject(i).getString("Titulo"),
-                    "Descripcion" to accidentes.getJSONObject(i).getString("Descripcion"),
-                    "img" to accidentes.getJSONObject(i).getString("img"),
-                    //Pasos is an array of Strings
-                    "Pasos" to listaPasos
-                )
+                "Titulo" to accidentes.getJSONObject(i).getString("Titulo"),
+                "Descripcion" to accidentes.getJSONObject(i).getString("Descripcion"),
+                "img" to accidentes.getJSONObject(i).getString("img"),
+                //Pasos is an array of Strings
+                "Pasos" to listaPasos,
+                "Preguntas" to preguntas,
+                "Respuestas" to respuestas
+            )
 
             //save the "accidente" object in the database
             firestore.collection("Accidentes").document(id).set(accidente)
@@ -109,8 +117,6 @@ class MainActivity : AppCompatActivity() {
 
 
         }
-
-
 
 
 /*

@@ -40,9 +40,6 @@ class HomeFragment_info(bundle: Int) : Fragment() {
             var test = data?.getString("test")
             var pos = data?.getString("posicion")
 
-            println("-----------------------------------------------------------------------")
-            println("$posGlobal BIEEEEN IMPRIMISTE EL NUMERO QUE NECESITABAS >:C")
-            println("-----------------------------------------------------------------------")
         }
 
 

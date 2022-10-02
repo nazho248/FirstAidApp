@@ -15,7 +15,15 @@
         "Aplicar un antiséptico como la Povidona Yodada. ",
         "Tapar la herida con gasas estériles de un solo uso y sujetarlas con un vendaje o esparadrapo.",
         "Quítese los guantes de manera que no haga contacto con la zona expuesta a la herida y lávese siempre las manos después de dar primeros auxilios."
-      ]
+      ],
+      "Preguntas" : [
+        "Sintomas",
+        "¿Tiene dolor?"
+      ],
+        "Respuestas" : [
+            "Fiebre /n Dolor de cabeza /n Dolor Articular",
+            "No"
+        ]
     },
     {
       "id": 2,
@@ -27,7 +35,15 @@
             "2",
             "3",
             "4"
-          ]
+          ],
+      "Preguntas" : [
+        "Sintomas",
+        "¿Tiene dolor?"
+      ],
+      "Respuestas" : [
+        "Cagasion /n Dolor de cabeza /n Dolor Articular",
+        "No"
+      ]
     }
   ]
 }
