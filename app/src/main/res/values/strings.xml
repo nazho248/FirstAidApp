@@ -11,4 +11,21 @@
     <string name="Pautas_Basicas">En esta sección encontrarás conceptos básicos de primeros auxilios</string>
     <string name="title_activity_information">Information</string>
     <string name="title_activity_aaaaaaaaaa">AAAAAAAAAA</string>
+    <string name="PautasBasicas_info">Podemos definir los primeros auxilios como el conjunto de actuaciones y técnicas que permiten la atención inmediata de una persona accidentada, hasta que llega la asistencia médica profesional, a fin de que las lesiones que ha sufrido no empeoren. De esta actuación dependerá la evolución de la persona accidentada.</string>
+    <string name="objetivo1_info">Mantener vivo al accidentado.</string>
+    <string name="objetivo2_info">Evitar nuevas lesiones o complicaciones.</string>
+    <string name="objetivo3_info">Poner al accidentado lo antes posible en manos de servicios médicos.</string>
+    <string name="objetivo4_info">Aliviar el dolor.</string>
+    <string name="objetivo5_info">Evitar infecciones o lesiones secundarias.</string>
+    <string name="consejos_generales">Siempre que se presten primeros auxilios hay que seguir unos consejos generales:</string>
+    <string name="consejo1_info">Actuar con rapidez, pero conservando la calma.</string>
+    <string name="consejo2_info">Evitar aglomeraciones.</string>
+    <string name="consejo3_info">Saber imponerse.</string>
+    <string name="consejo4_info">No mover a la persona herida salvo que sea imprescindible.</string>
+    <string name="consejo5_info">Traslado adecuado.</string>
+    <string name="consejo6_info">No dar al herido de beber, comer o medicar.</string>
+    <string name="consejo7_info">Tranquilizar al herido.</string>
+    <string name="consejo8_info">Mantener al herido caliente.</string>
+    <string name="consejo9_info">Hacer solo lo imprescindible.</string>
+    <string name="botiquinInfo">El botiquín de primeros auxilios es un recurso para la atención oportuna y adecuada de las víctimas de emergencias, el cual en general está compuesto por los siguientes elementos: Sustancias antisépticas, material de curación, instrumental y medicamentos.</string>
 </resources>

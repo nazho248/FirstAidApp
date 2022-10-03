@@ -56,24 +56,28 @@
         </com.google.android.material.card.MaterialCardView>
         <!--Fin texo -->
 
-        <!-- Pautas basicas-->
+
         <!--Pautas Basicas -->
         <RelativeLayout
+            android:id="@+id/card_view_PTB"
+            android:clickable="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:focusable="true">
             <androidx.cardview.widget.CardView
-                android:id="@+id/card_view_PTB"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 app:cardCornerRadius="4dp">
                 <LinearLayout
+                    android:id="@+id/imagenPTB"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:foreground="?android:attr/selectableItemBackground"
                     android:clickable="true"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:focusable="true">
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
@@ -115,22 +119,22 @@
 
         <!--Inicio  Botiquin primeros Auxilios-->
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
             <androidx.cardview.widget.CardView
-                android:id="@+id/card_view_BPA"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 app:cardCornerRadius="4dp">
                 <LinearLayout
+                    android:id="@+id/card_view_Botiquin"
+                    android:clickable="true"
+                    android:focusable="true"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:foreground="?android:attr/selectableItemBackground"
-                    android:clickable="true"
-
                     android:orientation="vertical">
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -168,16 +172,18 @@
                     </LinearLayout>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
-        </RelativeLayout>
+        </LinearLayout>
 
         <!--Fin Botiquin Primeros Auxilios-->
 
         <!--Inicio Tecnicas Basicas-->
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+
+            android:orientation="vertical"
+            >
             <androidx.cardview.widget.CardView
                 android:id="@+id/card_view_TnBs"
                 android:layout_width="match_parent"
@@ -185,10 +191,12 @@
                 android:layout_margin="10dp"
                 app:cardCornerRadius="4dp">
                 <LinearLayout
+                    android:id="@+id/card_view_tecnicas_basicas"
+                    android:clickable="true"
+                    android:focusable="true"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:foreground="?android:attr/selectableItemBackground"
-                    android:clickable="true"
                     android:orientation="vertical">
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -222,7 +230,7 @@
                     </LinearLayout>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
-        </RelativeLayout>
+        </LinearLayout>
 
 
 

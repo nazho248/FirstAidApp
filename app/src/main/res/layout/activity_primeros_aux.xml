@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".PautasBasicas">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="20dp"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbarInformation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/enfasis"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <!--Clickable Button-->
+                <LinearLayout
+                    android:id="@+id/backBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:padding="15dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_back_btn" />
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/titleinfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="numerito"
+                    android:gravity="center"
+                    android:minHeight="?actionBarSize"
+                    android:paddingStart="@dimen/appbar_padding"
+                    android:text="Botiquín de Primeros Auxilios"
+                    android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
+                    android:textColor="@color/white" />
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:id="@+id/relativeLayoutParentInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/fragment_presentation_image"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/imagenbotiquin" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="160dp"
+                android:orientation="vertical">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:divider="@android:color/transparent"
+                    android:dividerHeight="0.0px"
+                    android:elevation="4dp"
+                    app:cardElevation="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10sp"
+                            android:text="¿Que Debe Tener Un Botiquín de Primeros Auxilios Escolar?"
+                            android:textAlignment="center"
+                            android:textAppearance="?attr/textAppearanceHeadline6"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10sp"
+                        android:text="@string/botiquinInfo"
+                        android:textAlignment="center"
+                        android:textAppearance="?attr/textAppearanceHeadline6"
+                        android:textSize="14sp" />
+
+
+                    <!--Recursos-->
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:clipChildren="false"
+                        android:clipToPadding="false"
+                        android:divider="@android:color/transparent"
+                        android:elevation="4dp"
+                        app:cardElevation="5dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="10sp"
+                                android:text="Recursos"
+                                android:textAlignment="center"
+                                android:textAppearance="?attr/textAppearanceHeadline6"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <ListView
+                        android:id="@+id/listViewRecursos"
+                        android:layout_width="match_parent"
+                        android:layout_height="600dp"
+                        android:choiceMode="multipleChoice" />
+                    <!--Material de cuaracion-->
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:clipChildren="false"
+                        android:clipToPadding="false"
+                        android:divider="@android:color/transparent"
+                        android:elevation="4dp"
+                        app:cardElevation="5dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="10sp"
+                                android:text="Material de Curacion"
+                                android:textAlignment="center"
+                                android:textAppearance="?attr/textAppearanceHeadline6"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <ListView
+                        android:id="@+id/listViewMaterialCuaracion"
+                        android:layout_width="match_parent"
+                        android:layout_height="360dp"
+                        android:choiceMode="multipleChoice" />
+
+
+                    <!--Otros elementos-->
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:clipChildren="false"
+                        android:clipToPadding="false"
+                        android:divider="@android:color/transparent"
+                        android:elevation="4dp"
+                        app:cardElevation="5dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="10sp"
+                                android:text="Otros Elementos"
+                                android:textAlignment="center"
+                                android:textAppearance="?attr/textAppearanceHeadline6"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <ListView
+                        android:id="@+id/listViewOtrosElementos"
+                        android:layout_width="match_parent"
+                        android:layout_height="410dp"
+                        android:choiceMode="multipleChoice" />
+
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+</ScrollView>

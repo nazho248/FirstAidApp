@@ -4,7 +4,6 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.project.firstaid.R
@@ -17,10 +16,10 @@ class RecycleAdapter(var mContext: Context, val list: MutableList<ParentData>) :
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
 
         return if(viewType== Constants.PARENT){
-            val rowView: View = LayoutInflater.from(parent.context).inflate(R.layout.parent_row, parent,false)
+            val rowView: View = LayoutInflater.from(parent.context).inflate(R.layout.row_info_parent_pqrs, parent,false)
             GroupViewHolder(rowView)
         } else {
-            val rowView: View = LayoutInflater.from(parent.context).inflate(R.layout.child_row, parent,false)
+            val rowView: View = LayoutInflater.from(parent.context).inflate(R.layout.row_info_child_pqrs, parent,false)
             ChildViewHolder(rowView)
         }
     }

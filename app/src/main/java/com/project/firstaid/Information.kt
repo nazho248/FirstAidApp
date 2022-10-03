@@ -80,7 +80,7 @@ class Information : AppCompatActivity() {
 
         val adapter = ViewPageAdapterInfo(supportFragmentManager)
         adapter.addFragment(HomeFragment_info(position), "¿QUE HACER?" )
-        adapter.addFragment(PQRS_Fragment_info(), "PQRS" )
+        adapter.addFragment(PQRS_Fragment_info(position), "PQRS" )
 
         //Adaptador de las paginas para el visualizador
         val viewPager = findViewById<androidx.viewpager.widget.ViewPager>(R.id.viewPagerInfo)

@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".PautasBasicas">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="20dp"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbarInformation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/enfasis"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <!--Clickable Button-->
+                <LinearLayout
+                    android:id="@+id/backBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:padding="15dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_back_btn" />
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/titleinfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="numerito"
+                    android:gravity="center"
+                    android:minHeight="?actionBarSize"
+                    android:paddingStart="@dimen/appbar_padding"
+                    android:text="Pautas Básicas"
+                    android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
+                    android:textColor="@color/white" />
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:id="@+id/relativeLayoutParentInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/fragment_presentation_image"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/imagenpautas" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="160dp"
+                android:orientation="vertical">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:divider="@android:color/transparent"
+                    android:dividerHeight="0.0px"
+                    android:elevation="4dp"
+                    app:cardElevation="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10sp"
+                            android:text="¿Qué son los primeros auxilios?"
+                            android:textAlignment="center"
+                            android:textAppearance="?attr/textAppearanceHeadline6"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10sp"
+                        android:text="@string/PautasBasicas_info"
+                        android:textAlignment="center"
+                        android:textAppearance="?attr/textAppearanceHeadline6"
+                        android:textSize="14sp" />
+
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:clipChildren="false"
+                        android:clipToPadding="false"
+                        android:divider="@android:color/transparent"
+                        android:elevation="4dp"
+                        app:cardElevation="5dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="10sp"
+                                android:text="Objetivos"
+                                android:textAlignment="center"
+                                android:textAppearance="?attr/textAppearanceHeadline6"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+
+                    <!--Primer List Item-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_circle"
+                            app:tint="@color/grisApp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10sp"
+                            android:text="@string/objetivo1_info" />
+                    </LinearLayout>
+
+                    <!--Segundo List Item-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_marginTop="@dimen/list_item_margin_top"
+                            android:layout_gravity="top"
+                            android:src="@drawable/ic_circle"
+                            app:tint="@color/grisApp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10sp"
+                            android:text="@string/objetivo2_info" />
+                    </LinearLayout>
+
+                    <!--Tercer List Item-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_gravity="top"
+                            android:src="@drawable/ic_circle"
+                            app:tint="@color/grisApp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10sp"
+                            android:text="@string/objetivo3_info" />
+                    </LinearLayout>
+
+                    <!--Cuarto List Item-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_gravity="top"
+                            android:src="@drawable/ic_circle"
+                            app:tint="@color/grisApp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10sp"
+                            android:text="@string/objetivo4_info" />
+                    </LinearLayout>
+
+                    <!--Quinto List Item-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_gravity="top"
+                            android:src="@drawable/ic_circle"
+                            app:tint="@color/grisApp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10sp"
+                            android:text="@string/objetivo5_info" />
+                    </LinearLayout>
+
+
+                    <!--CONSEJOS GENERALES A SEGUIR-->
+
+                    <com.google.android.material.divider.MaterialDivider
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="20dp"
+                        android:layout_marginHorizontal="10dp"
+                        />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10sp"
+                            android:textStyle="bold"
+                            android:text="@string/consejos_generales" />
+                    </LinearLayout>
+
+                    <!--primero List Item-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_gravity="top"
+                            android:src="@drawable/ic_circle"
+                            app:tint="@color/grisApp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10sp"
+                            android:text="@string/consejo1_info" />
+                    </LinearLayout>
+
+                    <!--segundo List Item-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_gravity="top"
+                            android:src="@drawable/ic_circle"
+                            app:tint="@color/grisApp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10sp"
+                            android:text="@string/consejo2_info" />
+                    </LinearLayout>
+
+                    <!--tercer List Item-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_gravity="top"
+                            android:src="@drawable/ic_circle"
+                            app:tint="@color/grisApp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10sp"
+                            android:text="@string/consejo3_info" />
+                    </LinearLayout>
+
+                    <!--cuarto List Item-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_gravity="top"
+                            android:src="@drawable/ic_circle"
+                            app:tint="@color/grisApp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10sp"
+                            android:text="@string/consejo4_info" />
+                    </LinearLayout>
+
+                    <!--quinto List Item-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_gravity="top"
+                            android:src="@drawable/ic_circle"
+                            app:tint="@color/grisApp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10sp"
+                            android:text="@string/consejo5_info" />
+                    </LinearLayout>
+
+                    <!--quinto List Item-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_gravity="top"
+                            android:src="@drawable/ic_circle"
+                            app:tint="@color/grisApp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10sp"
+                            android:text="@string/consejo6_info" />
+                    </LinearLayout>
+
+                    <!--Sexto List Item-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_gravity="top"
+                            android:src="@drawable/ic_circle"
+                            app:tint="@color/grisApp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10sp"
+                            android:text="@string/consejo7_info" />
+                    </LinearLayout>
+
+                    <!--Septimo List Item-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_gravity="top"
+                            android:src="@drawable/ic_circle"
+                            app:tint="@color/grisApp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10sp"
+                            android:text="@string/consejo8_info" />
+                    </LinearLayout>
+
+                    <!--Octavo List Item-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_gravity="top"
+                            android:src="@drawable/ic_circle"
+                            app:tint="@color/grisApp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10sp"
+                            android:text="@string/consejo9_info" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+</ScrollView>
