@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -67,11 +68,13 @@ class PQRS_Fragment_info(position: Int) : Fragment() {
                     childData.add(childData2)
                 }
             } else {
-                Toast.makeText(
+/*                Toast.makeText(
                     requireContext(),
                     "No hay preguntas y respuestas disponibles",
                     Toast.LENGTH_SHORT
-                ).show()
+                ).show()*/
+                // set text to the element textview "noInfoAvailable" to "No hay preguntas y respuestas disponibles"
+                view.findViewById<TextView>(R.id.noInfoAvailable).text = "No hay información para mostrar"
             }
 
             for (i in 0 until parentData.size) {
